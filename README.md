@@ -1,6 +1,6 @@
 # bisparse-dep
 
-This paper contains data and code from the NAACL 2018 paper ["Robust Cross-lingual Hypernymy Detection using Dependency Context"](https://arxiv.org/abs/1803.11291).
+This paper contains data and code from the NAACL 2018 paper ["Robust Cross-lingual Hypernymy Detection using Dependency Context"](http://cogcomp.org/page/publication_view/841).
 
 # Data
 
@@ -32,7 +32,7 @@ Additionally, each dataset folder also contains `hyperparams.txt` which gives th
         - `<test-word-file-with-scores>` ::= Output of `balAPinc_multi_test.py` when run on test data
 - `generate_results.sh` - Run this to generate the results reported in the paper (currently generates all BiSparse-Dep (Full, Joint, Delex, Unlabeled) results in Tables 3a, 3b, and 4 )
 
-Scripts to train vectors will be available soon. For now, you can use the scripts from our [prior work](https://github.com/yogarshi/bisparse) if needed.
+Scripts to train vectors will be available soon. For now, you can use the scripts from [previous work](https://github.com/yogarshi/bisparse) if needed.
 
 # References
 
