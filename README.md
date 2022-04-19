@@ -2,7 +2,10 @@
 
 This paper contains data and code from the NAACL 2018 paper ["Robust Cross-lingual Hypernymy Detection using Dependency Context"](http://cogcomp.org/page/publication_view/841).
 
-# Data
+## Description
+Cross-lingual Hypernymy Detection involves determining if a word in one language (“fruit”) is a hypernym of a word in another language (“pomme” i.e. apple in French). The ability to detect hypernymy cross-lingually can aid in solving cross-lingual versions of tasks such as textual entailment and event coreference. We propose BISPARSE-DEP, a family of unsupervised approaches for cross-lingual hypernymy detection, which learns sparse, bilingual word embeddings based on dependency contexts. We show that BISPARSE-DEP can significantly improve performance on this task, compared to approaches based only on lexical context. Our approach is also robust, showing promise for low-resource settings: our dependency-based embeddings can be learned using a parser trained on related languages, with negligible loss in performance. We also crowd-source a challenging dataset for this task on four languages – Russian, French, Arabic, and Chinese. Our embeddings and datasets are publicly available.
+
+## Data
 
 The `data` directory contains two sub-directories :
 
@@ -11,13 +14,14 @@ The `data` directory contains two sub-directories :
 
 Both directories contain the exact tune/test split used in the paper, for each of four languages - Arabic (ar), French (fr), Russian (ru), and Chinese (zh). Additionally, `hyper-hypo` contains all examples that were crowdsourced - this is a superset of the tune/test data, and contains additional negative examples.
 
-# Pre-trained vectors
+## Pre-trained vectors
 
 The `pre-trained-vecs` directory contains the sparse, bilingual word vectors that have been used to generate the results in the paper. There are 2 vectors per langauge pair (ar-en, fr-en, ru-en, zh-en), per model (window, dependency, joint, delex, unlab), per dataset (hyper-hypo, hyper-cohypo), making for a total of 80 files. They have been organized by dataset, with each dataset folder containing 40 files
 
 Additionally, each dataset folder also contains `hyperparams.txt` which gives the hyperparameters used to generate the vecctors and obtain the results.
 
-# Scripts
+## Scripts
+
 - `balAPinc_multi_test.py` - Given a list of cross-lingual word pairs, and two cross-lingual word vector files (one per language), generate balAPinc scores for the word pairs
     - Syntax : `python scripts/balAPinc_multi_test.py <en-word-vectors> <non-en-word-vectors> <word-pairs-file> 0 <balAPinc-parameter> --prefix <optional prefix for output file> `, where
         -  `<en-word-vectors>` ::= File containing word vectors for English
@@ -34,10 +38,9 @@ Additionally, each dataset folder also contains `hyperparams.txt` which gives th
 
 Scripts to train vectors will be available soon. For now, you can use the scripts from [previous work](https://github.com/yogarshi/bisparse) if needed.
 
-# References
+## Citation
 
-If you use the code, data, or other resources from this paper, please cite our papers.
-Feel free to email us (`yogarshi@cs.umd.edu`, `shyamupa@seas.upenn.edu`) for any questions or assistance.
+Please cite the followings if using code, data or other resources from this paper
 
 ```
 @InProceedings{UpadhyayVyasCarpuatRoth2018,
@@ -67,3 +70,6 @@ Feel free to email us (`yogarshi@cs.umd.edu`, `shyamupa@seas.upenn.edu`) for any
 }
 
 ```
+
+## Contacts
+For inquiries : `yogarshi@cs.umd.edu`, `shyamupa@seas.upenn.edu`
