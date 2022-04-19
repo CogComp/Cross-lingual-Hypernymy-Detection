@@ -1,8 +1,9 @@
-# bisparse-dep
+# Cross-lingual-Hypernymy-Detection
 
 This paper contains data and code from the NAACL 2018 paper ["Robust Cross-lingual Hypernymy Detection using Dependency Context"](http://cogcomp.org/page/publication_view/841).
 
 ## Description
+
 Cross-lingual Hypernymy Detection involves determining if a word in one language (“fruit”) is a hypernym of a word in another language (“pomme” i.e. apple in French). The ability to detect hypernymy cross-lingually can aid in solving cross-lingual versions of tasks such as textual entailment and event coreference. We propose BISPARSE-DEP, a family of unsupervised approaches for cross-lingual hypernymy detection, which learns sparse, bilingual word embeddings based on dependency contexts. We show that BISPARSE-DEP can significantly improve performance on this task, compared to approaches based only on lexical context. Our approach is also robust, showing promise for low-resource settings: our dependency-based embeddings can be learned using a parser trained on related languages, with negligible loss in performance. We also crowd-source a challenging dataset for this task on four languages – Russian, French, Arabic, and Chinese. Our embeddings and datasets are publicly available.
 
 ## Data
@@ -72,4 +73,5 @@ Please cite the followings if using code, data or other resources from this pape
 ```
 
 ## Contacts
+
 For inquiries : `yogarshi@cs.umd.edu`, `shyamupa@seas.upenn.edu`
